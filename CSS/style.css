@@ -1,0 +1,634 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* font-family: "Sora", sans-serif;
+    font-family: "Roboto Condensed", sans-serif; */
+    font-family: "Roboto Flex", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+#headerdiv {
+    height: 10dvh;
+    background: #FFFFFF;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+/* General navbar styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+    height: 100%;
+    flex-wrap: nowrap;
+
+}
+
+.navclass {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+nav>img {
+    height: 60%;
+    object-fit: contain;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: #201414;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+ul > li:first-child > a {
+    color: #FFB716;
+    font-weight: bolder;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 15%;
+    gap: 32px;
+}
+
+.search>img {
+    height: 30%;
+}
+
+.btn,
+.search>button {
+    background: #FFD700;
+    padding: 10px 22px;
+    border: none;
+    color: 201414;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* navbar ends */
+
+/* about section starts here */
+.hero-section {
+    position: relative;
+    background-image: url('../assets/heroimg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100dvh;
+    width: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    overflow: hidden;
+}
+
+
+.about-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 59%;
+    padding: 42px 75px;
+    gap: 22px;
+}
+
+.mainheading {
+    font-size: 4.4rem;
+    font-weight: bolder;
+    letter-spacing: 0;
+    line-height: 1.q;
+    width: 70%;
+}
+
+
+
+article p {
+    font-size: 1rem;
+    padding: 26px 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .about_info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about_info_text {
+        padding: 5%;
+    }
+
+    .about_info_text>h1 {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+    .about_info_text>h1 {
+        font-size: 2rem;
+    }
+
+    .about_info_text>p {
+        font-size: 0.9rem;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .about_info_text>h1 {
+        font-size: 1.5rem;
+    }
+
+    .about_info_text>p {
+        font-size: 0.8rem;
+    }
+}
+
+/**********************************Latest section*************************************/
+#latest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.latest-info {
+    height: 100%;
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.latest_img {
+    width: 78%;
+}
+
+.latest-info-text {
+    display: flex;
+    flex-direction: column;
+    width: 54%;
+    align-items: center;
+    justify-content: center;
+}
+
+.latest_heading {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.latest_para {
+    text-align: center;
+}
+
+.latest_main {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 13rem;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 70dvh;
+    margin-top: 3%;
+
+}
+.time>p{
+    font-weight: bolder;
+    font-size: 18px;
+    color:#AAAAAA;
+}
+.time>h1{
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: top;
+    gap: 1rem;
+    max-height: 100%;
+    margin: 3%;
+
+}
+
+.first,
+.second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 33px;
+    border-radius: 20px;
+
+}
+
+.image>img {
+    width: 66%;
+    height: 75;
+    border-radius: 10px;
+    margin-left: 20%;
+
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    gap: 0.8rem;
+    text-align: left;
+    margin: 1rem;
+    color: 666666;
+}
+
+.line>img {
+    height: 65%;
+    margin-top: 22%;
+}
+
+.btn1 {
+    background: #FFB716;
+    padding: 11px 13px;
+    border: none;
+    color: #000000;
+    border-radius: 66px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 12px 0;
+}
+
+.btn2 {
+    background: #FFB716;
+    padding: 11px 16px;
+    border: none;
+    color: #FFFFFF;
+    border-radius: 66px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-align: left;
+    margin: 12px 0;
+    font-weight: bolder;
+}
+
+.btn_content {
+    width: 30%;
+    text-align: center;
+}
+
+.iconcontainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: #F5F5F5;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 30px 10px;
+    border-radius: 10px;
+    height: 30dvh;
+}
+
+.firsticon,
+.secondicon,
+.thirdicon,
+.fourthicon {
+    display: flex;
+    align-items: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.icon {
+    height: 43%;
+    box-shadow: rgba(112, 112, 112, 0.15) 3px 3px 3px 3px;
+    border-radius: 41px;
+    padding: 7px;
+}
+
+.inside>h2 {
+    font-size: 2.4rem;
+    color: #FFB716;
+    font-weight: bolder;
+}
+
+.blog_container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.card {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60dvh;
+    border-radius: 10px;
+}
+
+.card>img {
+    width: 100%;
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.text>h2 {
+    font-size: 1.1rem;
+}
+
+.label {
+    font-size: 0.69rem;
+}
+
+.blogpara {
+    font-size: 12px;
+    margin: 4px 0px;
+}
+
+.card>button {
+    align-items: left;
+    width: 40%;
+    margin-right: 60%;
+}
+
+.label {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    font-weight: bold;
+    align-items: center;
+    margin: 8px 0px;
+
+}
+
+.label>p:first-child {
+    background: #EEEEEE;
+    padding: 5px 14px;
+    border-radius: 3px;
+}
+
+
+/* songs section css code */
+#songs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.song_container {
+    position: relative;
+    background-image: url('../assets/song.png');
+    background-size: cover;
+    background-position: center;
+    height: 100dvh;
+    width: 90%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+
+.leftpart {
+    width: 74%;
+    padding: 34px 26px;
+    backdrop-filter: blur(10px);
+    background: rgb(90 62 30 / 34%);
+    border-radius: 15px;
+
+    box-shadow: 0 4px 8px rgb(90 62 30 / 34%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    /* align-items: center; */
+}
+.songheading{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.recommended{
+    font-weight: bolder;
+}
+.song-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 42px 75px;
+    gap: 4rem;
+    color: #FFFFFF;
+}
+
+.songs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.song_heading1 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    letter-spacing: 0;
+
+    color: #FFFFFF;
+}
+.song_heading{
+    margin-right: 16%;
+    font-size: 14px;
+    font-weight: bold;
+}
+.top_song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.playlist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex: 1; */
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.profilesong>img {
+    width: 20%;
+    height: 11%;
+    border-radius: 10px;
+}
+
+.playicon {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+}
+
+.playicon>img {
+    height: 40%;
+    width: 20%;
+}
+
+.playicon>p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.profilesong {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 65%;
+    gap: 1rem;
+}
+
+.song1 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.desc_song1 {
+    font-size: 12px;
+}
+
+/* **************************************Footer Starts************************************** */
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(180deg, #AA5C07 100%, #8A3E00 50%, #462400 0%);
+    color: white;
+    padding: 75px 75px;
+    gap: 1.4rem;
+    margin-top: 32px;
+}
+
+.footer_first {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer_first>img {
+    width: 18%;
+}
+
+.maininfo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5rem;
+    flex: 1;
+}
+
+.footer_second>img {
+    width: 18%;
+
+}
+
+#footer>img {
+    width: 84%;
+
+}
+
+.footer_second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-size: 14px;
+}
+
+.third_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    font-size: 14px;
+}
+
+.info1,
+.info2,
+.info3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 14px;
+}
+
+.info1>h2,
+.info2>h2,
+.info3>h2 {
+    font-size: 1rem;
+}
+.latest_para, .desc_para,
+.inside>p{
+    color: #666666;
+}
